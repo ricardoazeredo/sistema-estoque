@@ -1,0 +1,20 @@
+Sistema de Estoque
+
+- Login básico com token (Não deixará duas pessoas usarem a mesma conta ao mesmo tempo);
+- Usar responsividade;
+- Usar os conceitos de ux/ui;
+- Usar html semântico;
+- Usar o bootstrap para o layout.
+- Usar o javascript quando necessário.
+
+- Cadastro de produtos: 
+-- busca por codigo ou nome;
+-- terá imagem de cada produto;
+
+- Relatório de produtos:
+-- Exibi o quantidade e a quantidade minima do produto;
+-- gerar pdf e imprimir;
+
+usuario terá o nome, email, senha, token e avatar;
+
+produtos terá o código, o nome, preço, quantidade (em float para usar em kilos, por exemplo), minima quantidade em estoque
