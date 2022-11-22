@@ -1,8 +1,4 @@
-<?php
-    session_start();
-    ob_start();
-    require 'head.php';
-?>
+<!--  -->
 <div class="d-flex justify-content-between align-items-center">
     <div class="leftlogin">
         <img src="./images/estacionamento.jpg" alt="">

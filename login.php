@@ -1,19 +1,18 @@
 <?php
     session_start();
     ob_start();
-    require 'head.php';
+    require 'include/head.php';
     require 'config.php';
+    require 'include/functions.php';
 
-    if(isset($_SESSION['nome'])){
-        header('location: index.php');
-        exit;
-    }
+    estaLogado($pdo);
+        
 
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
     if(!empty($dados['SendLogin'])){
 
-        $sql = $pdo->prepare("SELECT * FROM usuario WHERE email = :email");
+        $sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email");
         $sql->bindParam(':email', $dados['email'], PDO::PARAM_STR);
         $sql->execute();
 
@@ -21,8 +20,11 @@
             $resultado = $sql->fetch(PDO::FETCH_ASSOC);
 
             if(password_verify($dados['password'], $resultado['senha'])){
+                $token = criandoToken($pdo,$dados['email']);
+
                 $_SESSION['id'] = $resultado['id'];
                 $_SESSION['nome'] = $resultado['nome'];
+                $_SESSION['token'];  
                 header('Location: index.php');
                 exit;
             } else {
@@ -42,7 +44,7 @@
 
 <div class="d-flex justify-content-between align-items-center">
     <div class="leftlogin">
-        <img src="./images/estacionamento.jpg" alt="">
+        <img src="./" alt="">
     </div>
     <div class="rightlogin">
         <div class="loginArea">            
@@ -79,4 +81,4 @@
 
 
     
-<?php include 'footer.php'; ?>
+<?php include './include/footer.php'; ?>
