@@ -1,7 +1,8 @@
     
+        
         <footer>
 
         </footer>
-        <?php 'include/script.php'; ?>
+        <?php include 'include/script.php'; ?>
     </body>
 </html>

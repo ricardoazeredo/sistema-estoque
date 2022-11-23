@@ -4,6 +4,7 @@
     require 'config.php';
     require 'include/head.php';
     require 'include/functions.php';
+    require 'include/header.php';
 
     function construtor($pdo){
         $email= "rico@email.com";
@@ -23,16 +24,13 @@
     estaLogado($pdo);
 ?>
    <div class="container">
-    <main>
-        <h1>SIS Estoque - Página Inicial</h1>
-    </main>
+        <div class="conteudo">
+            <h1>SIS Estoque - Página Inicial</h1>
 
-
-
-
-
+        </div>     
+        
 
 
    </div>
 
-<?php 'include/script.php'; ?>
+<?php include 'include/footer.php'; ?>

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: max-content;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+.bg-estoque {
+    background: #11f !important;
+}
+
+/* Navibar */
+.navbar-dark .navbar-nav .nav-link .link-menu {
+    
+    color: #ffffff !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+* main */
+.conteudo {
+    flex: 1 0 auto;
+    margin-top: 8rem !important;   
+}

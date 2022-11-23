@@ -30,3 +30,9 @@ function estaLogado($pdo) {
     }
 }
 
+function logout(){
+    unset($_SESSION['token']);
+        header("Location: login.php");
+        exit;
+}
+
