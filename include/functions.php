@@ -22,11 +22,13 @@ function estaLogado($pdo) {
        $sql->execute();
        
        if($sql->rowCount() > 0) {
-            header('Location: index.php');
-            exit;
+           return true;
        } else {
-            header('Location: login.php');
+            return false;
        }
+    }
+    else {
+        return false;
     }
 }
 

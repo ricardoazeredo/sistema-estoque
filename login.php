@@ -5,8 +5,14 @@
     require 'config.php';
     require 'include/functions.php';
 
-    estaLogado($pdo);
-        
+    $logado  = estaLogado($pdo);
+    echo "<br/>";
+    echo $logado;   
+    
+    if($logado > 0){
+        header('Location: index.php');
+        exit;
+    }
 
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -24,7 +30,7 @@
 
                 $_SESSION['id'] = $resultado['id'];
                 $_SESSION['nome'] = $resultado['nome'];
-                $_SESSION['token'];  
+                $_SESSION['token'] = $token;  
                 header('Location: index.php');
                 exit;
             } else {
