@@ -40,7 +40,6 @@ html, body {
     
 }
 
-
 .leftlogin{    
     width: 50%;
     height: 100vh; 
@@ -63,4 +62,22 @@ html, body {
 .rightlogin .loginArea form a {
     text-decoration: none;
     color: #FFF;
+}
+
+@media (max-width: 1080px) {
+    .leftlogin{    
+        display: none; 
+    }
+    .rightlogin {
+        background: #11f;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .editar {
+        display: block !important;
+    }
+    .leftside .avatar{
+       text-align: center;
+    }
 }

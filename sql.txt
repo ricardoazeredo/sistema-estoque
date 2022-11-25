@@ -16,5 +16,6 @@ create table produtos (
     produto varchar(100) not null,
   	preco float not null,
     quantidade float not null,
-    min_quantidade float not null
+    min_quantidade float not null,
+    imagem_url varchar(200)
 );

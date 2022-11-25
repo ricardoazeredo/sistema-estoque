@@ -41,7 +41,7 @@
         </table>
     </div>
 </div>
-
+<?php include 'include/footer.php'; ?>
 <script type="text/javascript">
     function imprimir(){
         window.print();

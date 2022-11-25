@@ -38,7 +38,7 @@
                 ?>
                 </div>   
          <?php endif; ?>   
-        <div class="d-flex justify-content-around align-items-center">
+        <div class="editar d-flex justify-content-around align-items-center">
             <div class="leftside">
            
                 <div class="avatar mt-4">
@@ -94,4 +94,5 @@
 
     </div>
 </div>
+<?php include 'include/footer.php'; ?>
 
