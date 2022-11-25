@@ -75,7 +75,6 @@
                 </div>
         
                 <input type="submit" value="Salvar" name="SendLogin" class="btn btn-primary" />
-                <h3><a type="button" class="btn btn-link" href="cadastrar.php">Inscrever</a></h3>
             </form>
 
         </div>
