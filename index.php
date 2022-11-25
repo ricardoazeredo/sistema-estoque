@@ -78,7 +78,7 @@
                             <td>R$ <?php echo number_format($item['preco'],2,',','.'); ?></td>
                             <td><?php echo $item['quantidade']; ?></td>
                             <td>
-                                <a href="editar-produto.php<?php echo $item['id'];?>">Editar</a>
+                                <a href="editar-produto.php?id=<?php echo $item['id'];?>">Editar</a>
                             </td>
                             
                         </tr>
