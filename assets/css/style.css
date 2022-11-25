@@ -37,14 +37,10 @@ html, body {
 .avatar img{
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    
 }
 
-.avatar-header {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
+
 .leftlogin{    
     width: 50%;
     height: 100vh; 
@@ -53,7 +49,7 @@ html, body {
     max-height: 100vh;
 }
 .rightlogin {
-    background: #FF1B1C;
+    background: #11f;
     width: 50vw;
     height: 100vh;
 }
