@@ -2,7 +2,8 @@
 session_start();
 ob_start();
 require 'config.php';
-$id = $_SESSION['id'];
+$id = filter_input(INPUT_POST,'id');
+echo $id;
 
 $sql = $pdo->query("SELECT * FROM produtos WHERE id = '$id'");
 
@@ -19,6 +20,9 @@ $permitidos = array('image/jpg','image/jpeg','image/png');
 
     echo 'Arquivo salvo com sucesso';
     header('Location: editar-produto.php');
+    exit;
  } else {
     echo 'Arquivo não permitido';
  }
+?>
+

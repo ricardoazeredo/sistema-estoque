@@ -1,5 +1,7 @@
 <?php
 
+
+
 $db_name = "estoque_db";
 $db_host = "localhost";
 $db_user = "root";

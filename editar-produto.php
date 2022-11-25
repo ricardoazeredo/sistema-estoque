@@ -8,14 +8,17 @@
     //Criando o array para add as informções
     $banco =[];
 
-    $id = $_SESSION['id'];
+    $id = filter_input(INPUT_GET,'id');
+    echo $id;
     if($id) {
         $sql = $pdo->query("SELECT * FROM produtos WHERE id = $id");
-        $banco = $sql->fetch(PDO::FETCH_ASSOC); 
+        $banco = $sql->fetch(PDO::FETCH_ASSOC);        
     } else {
-        header("Location: profile.php");
+        header("Location: index.php");
         exit;
-    }  
+    } 
+    
+    
     
 ?>
 
@@ -40,13 +43,14 @@
          <?php endif; ?>   
         <div class="editar d-flex justify-content-around align-items-center">
             <div class="leftside">
-           
+            
                 <div class="avatar mt-4">
                     <img src="assets/img/<?=$banco['imagem_url']; ?>" alt="">
                 </div>
                 <div class="mudar">
                     
                     <form action="recebedor.php" method="post" enctype="multipart/form-data" />
+                    <input type="hidden" name="id" value="<?php echo $banco['id']; ?>">
                     <div class="mb-3">
                         <label for="formFile" class="form-label">Trocar Imagem</label>
                         <input class="form-control" type="file" name="img">
