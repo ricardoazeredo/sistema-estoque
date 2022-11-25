@@ -49,7 +49,7 @@
 
 <div class="d-flex justify-content-between align-items-center">
     <div class="leftlogin">
-        <img src="./" alt="">
+        <img src="./assets/img/galpao.jpg" alt="imagem de estoque">
     </div>
     <div class="rightlogin">
         <div class="loginArea">            
