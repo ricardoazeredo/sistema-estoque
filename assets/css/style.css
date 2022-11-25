@@ -21,8 +21,12 @@ html, body {
     font-size: 1.1rem;
 }
 
-
 .conteudo {
     flex: 1 0 auto;
     margin-top: 6rem !important;   
+}
+
+.exibicao {
+    width: 100px;
+    height: 100px;
 }
