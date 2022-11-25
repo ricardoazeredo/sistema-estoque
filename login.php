@@ -6,8 +6,7 @@
     require 'include/functions.php';
 
     $logado  = estaLogado($pdo);
-    echo "<br/>";
-    echo $logado;   
+     
     
     if($logado > 0){
         header('Location: index.php');

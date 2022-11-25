@@ -22,17 +22,14 @@
 
     construtor($pdo);
     $logado = estaLogado($pdo);
-    echo "<br/>";
-    echo $logado;
-    echo "<br/>";
-    print_r($_SESSION['token']);
-
+    
+   
     if($logado == 0){
         echo "<br/>";
          echo $logado;
         header("Location: login.php");
     }
-
+      
    
 ?>
    <div class="container">

@@ -21,8 +21,8 @@ html, body {
     font-size: 1.1rem;
 }
 
-* main */
+
 .conteudo {
     flex: 1 0 auto;
-    margin-top: 8rem !important;   
+    margin-top: 6rem !important;   
 }
