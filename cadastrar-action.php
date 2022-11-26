@@ -11,7 +11,7 @@
 
     if($name && $email && $password && $password_confirm){
         
-        $sql = $pdo->prepare("select * from usuario where email = :email");
+        $sql = $pdo->prepare("select * from usuarios where email = :email");
         $sql->bindValue(':email', $email);
         $sql->execute();
 
@@ -34,17 +34,17 @@
                 exit;
             } else {
                 $_SESSION['msg'] = "Erro: As Senhas não Batem!";
-                header('Location: cadastrar.php ');
+                header('Location: cadastrar-usuario.php ');
                 exit;
             }
         } else {
             $_SESSION['msg'] = "Erro: E-mail já cadastrado!";
-            header('Location: cadastrar.php ');
+            header('Location: cadastrar-usuario.php ');
             exit;
         }
     } else {
         $_SESSION['msg'] = "Erro: Necessário preencher todos os campos!";
-        header('Location: cadastrar.php ');
+        header('Location: cadastrar-usuario.php ');
         exit;
     }
 

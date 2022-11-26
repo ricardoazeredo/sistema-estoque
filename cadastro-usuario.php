@@ -5,21 +5,6 @@
     require ('./include/head.php');    
     require './include/header.php';
 
-    //Criando o array para add as informções
-    $banco =[];
-
-    $id = filter_input(INPUT_GET,'id');
-    echo $id;
-    if($id) {
-        $sql = $pdo->query("SELECT * FROM produtos WHERE id = $id");
-        $banco = $sql->fetch(PDO::FETCH_ASSOC);        
-    } else {
-        header("Location: index.php");
-        exit;
-    } 
-    
-    
-    
 ?>
 
 <div class="container">
@@ -41,8 +26,8 @@
                 ?>
                 </div>   
          <?php endif; ?>   
-        <div class="editar d-flex justify-content-around align-items-center">
-            
+        <div class="d-flex justify-content-center align-items-center">
+            <div>
                 <h1>SIS Estoque - Cadastrar Usuário</h1>
     
                 <form action="cadastrar-action.php" method="POST" class="mb-4">
@@ -54,7 +39,7 @@
                     
                     <div class="mb-3">
                         <label class="form-label">E-mail</label>
-                        <input type="email" name="produto" class="form-control" >
+                        <input type="email" name="email" class="form-control" >
                     </div>
                     
                     <div class="mb-3">
@@ -69,7 +54,9 @@
                     <input type="submit" value="Adicionar" class="btn btn-primary" name="add">
     
                 </form>
+
             </div>
+            
         </div>
 
     </div>
