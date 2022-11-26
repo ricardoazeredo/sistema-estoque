@@ -32,6 +32,9 @@
         </li>
         <?php } ?>
         <li class="nav-item">
+          <a class="nav-link active" href="cadastro-usuario.php" disabled>Cadastrar Usuário</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" href="sair.php">Sair</a>
         </li>
       </ul>

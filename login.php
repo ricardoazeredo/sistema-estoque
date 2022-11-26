@@ -74,7 +74,7 @@
                     </label>
                 </div>
         
-                <input type="submit" value="Salvar" name="SendLogin" class="btn btn-primary" />
+                <input type="submit" value="Entrar" name="SendLogin" class="btn btn-primary" />
             </form>
 
         </div>
