@@ -64,13 +64,14 @@
                          name="email" 
                          class="form-control" 
                          value="<?php if(isset($dados['email'])){ echo $dados['email']; } ?>"
+                         placeholder="Digite seu e-mail"
                         >
                     </label>
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">
                         Senha: <br/>
-                        <input type="password" name="password" class="form-control">
+                        <input type="password" name="password" class="form-control" placeholder="Digite sua senha..." >
                     </label>
                 </div>
         

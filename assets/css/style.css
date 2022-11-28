@@ -64,6 +64,10 @@ html, body {
     color: #FFF;
 }
 
+#buscar{
+    visibility: hidden;
+}
+
 @media (max-width: 680px) {
     .leftlogin{    
         display: none; 
@@ -79,5 +83,9 @@ html, body {
     }
     .leftside .avatar{
        text-align: center;
+    }
+
+    #buscar{
+        visibility: visible;
     }
 }

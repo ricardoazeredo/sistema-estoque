@@ -45,7 +45,8 @@
    
    <div class="container">
         <div class="conteudo">
-            <h1>SIS Estoque - Página Inicial</h1>
+            <h1>SIS Estoque</h1>
+            <h4>Bem-vindo, <?php echo $_SESSION['nome']; ?></h4>
 
             <form method="get" class="mt-4">
                 <fieldset>
@@ -57,7 +58,8 @@
                         class="form-control"
                         value=<?=(!empty($_GET['busca'])) ? $_GET['busca'] : '' ;?>
                         
-                    >                    
+                    >
+                    <input type="submit" value="Buscar" id="buscar" class="btn btn-primary">                    
                 </fieldset>
             </form>
             <div class="table-responsive">

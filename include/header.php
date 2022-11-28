@@ -8,8 +8,8 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-      <div class="left">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
         <ul class="navbar-nav">
           <?php if($url === "/sis-estoque/index.php") { 
             echo '';
@@ -32,21 +32,26 @@
             <a class="nav-link active" href="relatorio.php">Relatório</a>
           </li>
           <?php } ?>
+          <?php if($url === "/sis-estoque/cadastro-usuario.php") { 
+            echo '';
+          } else {
+          ?>
           <li class="nav-item">
             <a class="nav-link active" href="cadastro-usuario.php">Cadastrar Usuário</a>
           </li>
-        </ul>
-      </div>
-      <div class="right">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="">Bem-vindo, <?php echo $_SESSION['nome']; ?></a>
-          </li>
+          <?php } ?>
+          
+          
           <li class="nav-item">
             <a class="nav-link active" href="sair.php">Sair</a>
           </li>
+
         </ul>
+        
       </div>
+      
+        
+      
     </div>
   </div>
 </nav>
